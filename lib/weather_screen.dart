@@ -18,8 +18,6 @@ class WeatherScreen extends StatefulWidget {
 
 class _WeatherScreenState extends State<WeatherScreen> {
 
-  late Future
-
   //late double temp;
   //bool isLoading = false;
 
