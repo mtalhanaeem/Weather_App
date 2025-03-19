@@ -18,6 +18,7 @@ class WeatherScreen extends StatefulWidget {
 
 class _WeatherScreenState extends State<WeatherScreen> {
 
+  late Future<Map<String, dynamic>> weather;
   //late double temp;
   //bool isLoading = false;
 
@@ -47,6 +48,13 @@ class _WeatherScreenState extends State<WeatherScreen> {
     }catch (e) {
       throw e.toString();
     }
+  }
+
+
+  @override
+  void initState() {
+    super.initState();
+    weather = getCurrentWeather();
   }
 
   @override
@@ -79,7 +87,9 @@ class _WeatherScreenState extends State<WeatherScreen> {
           //but we can use IconButton
           IconButton(
               onPressed: () {
-                setState(() {});
+                setState(() {
+                  weather = getCurrentWeather();
+                });
               },
               icon: const Icon(Icons.refresh)
           ),
@@ -88,7 +98,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
 
       ///Body
       body: FutureBuilder(
-        future: getCurrentWeather(),
+        future: weather,
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             //CircularProgressIndicator.adaptive() will show the loading
