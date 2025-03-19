@@ -12,9 +12,10 @@ class WeatherAppHome extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false, //debug banner will remove
-      theme: ThemeData.dark(useMaterial3: true),
+      theme: ThemeData.light(useMaterial3: true),
+      //for Dark theme
+      /*theme: ThemeData.dark(useMaterial3: true),*/
       home: const WeatherScreen(),
     );
   }
 }
-
