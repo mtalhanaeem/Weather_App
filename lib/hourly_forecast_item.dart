@@ -24,6 +24,8 @@ class HourlyForecastItem extends StatelessWidget {
             borderRadius: BorderRadius.circular(12)
         ),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
               time,
