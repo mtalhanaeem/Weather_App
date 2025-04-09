@@ -10,6 +10,8 @@ class WeatherAppHome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //MyApp Element is created and this line will give you Element
+    //print(context.runtimeType);
     return MaterialApp(
       debugShowCheckedModeBanner: false, //debug banner will remove
       theme: ThemeData.light(useMaterial3: true),

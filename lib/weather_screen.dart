@@ -198,7 +198,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
               // ),
 
               SizedBox(
-                height: 120,
+                height: 135,
                 child: ListView.builder(
                     itemCount: 5,
                     scrollDirection: Axis.horizontal,
